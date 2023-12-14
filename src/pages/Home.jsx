@@ -29,6 +29,16 @@ function Home() {
                 LET&apos;S <br className="x1:block hidden" /> DO IT.
               </h1>
             </motion.div>
+            <motion.div
+              {...headContentAnimation}
+              className="flex flex-col gap-5"
+            >
+              <p className="max-w-md font-normal text-gray-600 text-base">
+                Create your unique and exclusive shirt with our brand-new 3D
+                customization tool. <strong>Unleash your imagimation</strong>{" "}
+                and define your own style
+              </p>
+            </motion.div>
           </motion.div>
         </motion.section>
       )}
