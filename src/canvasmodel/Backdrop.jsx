@@ -1,7 +1,12 @@
-import React from "react";
+import { AccumulativeShadows, RandomizedLight } from "@react-three/drei";
+import { easing } from "maath";
 
 function Backdrop() {
-  return <div>Backdrop</div>;
+  return (
+    <AccumulativeShadows>
+      <RandomizedLight amount={4}></RandomizedLight>
+    </AccumulativeShadows>
+  );
 }
 
 export default Backdrop;
