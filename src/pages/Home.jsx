@@ -23,6 +23,13 @@ function Home() {
               className="w-8 h-8 object-contain"
             />
           </motion.header>
+          <motion.div className="home-content" {...headContainerAnimation}>
+            <motion.div {...headTextAnimation}>
+              <h1 className="head-text">
+                LET&apos;S <br className="x1:block hidden" /> DO IT.
+              </h1>
+            </motion.div>
+          </motion.div>
         </motion.section>
       )}
     </AnimatePresence>
