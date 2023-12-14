@@ -1,9 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useSnapshot } from "valtio";
 import state from "../store";
-import { slideAnimation } from "../config/motion";
+import { fadeAnimation, slideAnimation } from "../config/motion";
 import { EditorTabs } from "../config/constants";
-import { Tab } from "../components";
+import { CustomButton, Tab } from "../components";
 
 function Customizer() {
   const snap = useSnapshot(state);
@@ -24,6 +24,17 @@ function Customizer() {
                 ))}
               </div>
             </div>
+          </motion.div>
+          <motion.div
+            className="absolute z-10 top-5 right-5"
+            {...fadeAnimation}
+          >
+            <CustomButton
+              type="filled"
+              title="Go Back"
+              handleClick={() => (state.intro = true)}
+              customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+            />
           </motion.div>
         </>
       )}
