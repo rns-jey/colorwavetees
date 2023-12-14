@@ -18,7 +18,7 @@ function CustomButton({ type, title, customStyles, handleClick }) {
       style={generateStyle(type)}
       onClick={handleClick}
     >
-      CustomButton
+      {title}
     </button>
   );
 }
